@@ -72,4 +72,4 @@ A sleek, high-performance text analysis tool built with **Node.js**, **Express**
 - **Debouncing**: The client uses a custom type-safe `debounce` implementation to ensure we don't overwhelm the server with requests while the user is typing.
 - **Modern CSS**: Uses `@supports` blocks for experimental properties like `backdrop-filter` and `background-clip`, ensuring both IDE clarity and browser compatibility.
 - **Strict Typing**: TypeScript is configured with `strict: true` to ensure high code quality and prevent common runtime errors.
-
+- **Accessibility**: All form elements (file input, textarea) include `aria-label` attributes to ensure compatibility with screen readers, even in a "glass-morphism" design.

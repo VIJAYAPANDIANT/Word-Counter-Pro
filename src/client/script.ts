@@ -53,3 +53,29 @@ const handleInput = debounce((e: Event) => {
 }, 300);
 
 textInput.addEventListener('input', handleInput);
+
+// File Upload Logic
+const uploadBtn = document.getElementById('uploadBtn') as HTMLButtonElement;
+const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+
+uploadBtn.addEventListener('click', () => {
+    fileInput.click();
+});
+
+fileInput.addEventListener('change', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const file = target.files?.[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const content = event.target?.result as string;
+            textInput.value = content;
+            analyzeText(content);
+        };
+        reader.readAsText(file);
+        
+        // Reset input so the same file can be uploaded again
+        target.value = '';
+    }
+});
