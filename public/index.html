@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Premium Text Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="galaxy">
+            <div class="stars1"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Word <span>Counter</span></h1>
+            <p>Analyze your text with precision and style.</p>
+        </header>
+
+        <section class="editor-section">
+            <div class="glass-card">
+                <textarea id="textInput" placeholder="Start typing or paste your text here..." spellcheck="false"></textarea>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="wordCount">0</span>
+                        <span class="stat-label">Words</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="charCount">0</span>
+                        <span class="stat-label">Characters</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="charCountNoSpaces">0</span>
+                        <span class="stat-label">Chars (No Spaces)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Word Counter Pro. Powered by Node.js & TypeScript.</p>
+        </footer>
+    </main>
+
+    <script src="client/script.js"></script>
+</body>
+</html>
