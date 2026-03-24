@@ -1,24 +1,24 @@
-# Word Counter Pro - Premium Text Analytics
+# 🌌 Word Counter Pro - Premium Text Analytics
 
-A sleek, high-performance text analysis tool built with **Node.js**, **Express**, and **TypeScript**. This application provides real-time statistics for word counts, character counts, and more, all wrapped in a stunning cosmic-themed glassmorphism interface.
+A sleek, cosmic-themed high-performance text analysis tool built with **Node.js 🟢**, **Express 🚂**, and **TypeScript 📘**. This application provides real-time statistics for word counts, character counts, and more, all wrapped in a stunning cosmic-themed glassmorphism interface.
 
 ## ✨ Features
 
-- **Real-time Analysis**: Get instant feedback as you type, powered by an efficient debounced API.
-- **Premium Aesthetics**: 
-  - **Glassmorphism**: Elegant transparent cards with backdrop blur.
-  - **Dynamic Background**: Moving cosmic blobs and a three-layer animated galaxy star field.
-  - **Smooth Transitions**: Micro-animations for a fluid user experience.
-- **Deep Insights**:
-  - Word Count
-  - Character Count (with spaces)
-  - Character Count (without spaces)
+- **⚡ Real-time Analysis**: Get instant feedback as you type, powered by an efficient debounced API.
+- **🎨 Premium Aesthetics**: 
+  - **💎 Glassmorphism**: Elegant transparent cards with backdrop blur.
+  - **🌌 Dynamic Background**: Moving cosmic blobs and a three-layer animated galaxy star field.
+  - **✨ Smooth Transitions**: Micro-animations for a fluid user experience.
+- **📊 Deep Insights**:
+  - 📝 Word Count
+  - 🔤 Character Count (with spaces)
+  - ✂️ Character Count (without spaces)
 
 ## 🚀 Tech Stack
 
-- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), TypeScript.
-- **Backend**: Node.js, Express.js.
-- **Tooling**: TypeScript Compiler (tsc), npm.
+- **⚛️ Frontend**: HTML5, Vanilla CSS3 (Custom Design System), TypeScript.
+- **🖥️ Backend**: Node.js, Express.js.
+- **🛠️ Tooling**: TypeScript Compiler (tsc), npm, Vercel CLI.
 
 ## 🛠️ Project Structure
 
@@ -71,5 +71,16 @@ A sleek, high-performance text analysis tool built with **Node.js**, **Express**
 
 - **Debouncing**: The client uses a custom type-safe `debounce` implementation to ensure we don't overwhelm the server with requests while the user is typing.
 - **Modern CSS**: Uses `@supports` blocks for experimental properties like `backdrop-filter` and `background-clip`, ensuring both IDE clarity and browser compatibility.
-- **Strict Typing**: TypeScript is configured with `strict: true` to ensure high code quality and prevent common runtime errors.
-- **Accessibility**: All form elements (file input, textarea) include `aria-label` attributes to ensure compatibility with screen readers, even in a "glass-morphism" design.
+- **Strict Typing**: TypeScript is configured with `strict: true` to ensure high code quality.
+- **Accessibility**: All form elements (file input, textarea) include `aria-label` attributes.
+
+## 🌩️ Vercel Deployment
+
+To deploy this project to Vercel, use the Vercel CLI:
+
+1. **Production Deploy**:
+   ```powershell
+   npx vercel --prod
+   ```
+2. **Configuration**: The project uses a custom `vercel.json` to handle static files from `public/` automatically and route `/api` to the Node.js server.
+3. **Troubleshooting**: If you see a `500` error, ensure you are using the stable version of Express (`^4.19.2`) as specified in the `package.json`.
